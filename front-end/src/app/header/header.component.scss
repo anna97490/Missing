@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+  padding: 0 5px;
+  box-shadow: 0px 7px 13px 0px rgb(0 0 0 / 5%);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 140px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 13%;
+  padding-right: 15px;
+}
