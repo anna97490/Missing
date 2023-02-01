@@ -1,0 +1,40 @@
+.container {
+  height: 100vh;
+  background : url(../../assets/wallpaper.png) no-repeat;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  width: 140px;
+}
+
+.header-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+
+.body-container {
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  .body-title {
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  .body-title h2 {
+    margin-bottom: 10%;
+  }
+}
+
+
