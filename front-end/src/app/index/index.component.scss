@@ -1,0 +1,43 @@
+.container  {
+  height: 100vh;
+  padding: 10% 16% 0% 16%;
+  background-color: #EFF0E8;
+  & .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 65%;
+    & .card {
+      display: flex;
+      justify-content: space-between;
+      background-color: #FFF;
+      width: 100%;
+      height: 45%;
+      border-radius: 4px;
+      box-shadow: 4px 10px 17px 0px rgb(0 0 0 / 9%);
+      & .card-picture {
+        width: 30%;
+        height: 100%;
+      }
+      & .card-picture img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px 0 0 4px;
+        object-fit: cover;
+      }
+      & .card-content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 68%;
+      }
+      & .card-content span {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
