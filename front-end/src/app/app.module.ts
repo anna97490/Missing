@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ButtonComponent } from './components/button/button.component';
+import { IndexComponent } from './index/index.component';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +15,7 @@ import { ButtonComponent } from './components/button/button.component';
     HeaderComponent,
     HomeComponent,
     ButtonComponent,
-
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
