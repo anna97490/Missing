@@ -10,6 +10,8 @@ import { IndexComponent } from './index/index.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { SigninComponent } from './signin/signin.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { SidebarModule } from 'ng-sidebar';
 
 
 @NgModule({
@@ -22,10 +24,12 @@ import { SigninComponent } from './signin/signin.component';
     DashboardComponent,
     LoginComponent,
     SigninComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SidebarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

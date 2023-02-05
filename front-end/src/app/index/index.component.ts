@@ -7,9 +7,9 @@ import { Post } from '../models/post.model';
   styleUrls: ['./index.component.scss']
 })
 
-
 export class IndexComponent {
   posts: Post[] = [];
+  opened: boolean = false;
 
   ngOnInit() {
     this.posts = [
@@ -23,5 +23,9 @@ export class IndexComponent {
         description: 'description'
       },
     ];
+  }
+
+  toggleSidebar() {
+    this.opened = !this.opened
   }
 }

@@ -1,4 +1,7 @@
+@import '../app.component.scss';
+
 .container {
   height: 100vh;
   padding: 10% 16% 0% 16%;
+  background-color: $primary-color-bckgrnd;
 }
