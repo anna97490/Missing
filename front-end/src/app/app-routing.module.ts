@@ -5,6 +5,9 @@ import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
 import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MissingFileComponent } from './missing-file/missing-file.component';
+import { ListMissingFileComponent } from './list-missing-file/list-missing-file.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +15,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'create-missing-file', component: MissingFileComponent },
+  { path: 'list-missing', component: ListMissingFileComponent },
 ];
 
 @NgModule({

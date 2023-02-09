@@ -1,0 +1,22 @@
+<div class="container-page">
+  <a href="#" class="card-link flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <div class="cont-img">
+      <a href="#">
+        <img class="object-cover md:rounded-none md:rounded-l-lg" src="../../assets/jane-do.png" alt="The logo of Missing website">
+      </a>
+    </div>
+
+    <!-- <span>{{ post.picture }}</span> -->
+    <div class="flex flex-col justify-between p-4 leading-normal" *ngFor="let post of posts">
+      <span class="field-disappearance">{{ post.firstname }}</span>
+      <span class="field-disappearance">{{ post.lastname }}</span>
+      <span class="field-disappearance">Né(e) le:</span>
+      <span class="field-disappearance">{{ post.birthDate }}</span>
+      <span class="field-disappearance">Date de la disparition:</span>
+      <span class="field-disappearance">{{ post.dateOfDisappearance }}</span>
+      <span class="field-disappearance">Lieu de la disparition:</span>
+      <span class="field-disappearance">{{ post.placeOfDisappearance }}</span>
+      <span class="field-disappearance">{{ post.description }}</span>
+    </div>
+  </a>
+</div>
