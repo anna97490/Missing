@@ -1,41 +1,31 @@
-.container {
+.container-home {
   height: 100vh;
   background : url(../../assets/wallpaper.png) no-repeat;
   position: relative;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
-  align-items: flex-start;
-  width: 140px;
-}
-
-.header-navigation {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 20%;
-}
-
-.body-container {
-  z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 90%;
-  .body-title {
-    color: rgb(0, 0, 0);
-    text-align: center;
-  }
-  .body-title h2 {
-    margin-bottom: 10%;
+  .body-container {
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    .body-title {
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+    .body-title h1 {
+      margin-bottom: 3%;
+      font-size: 35px;
+      font-weight: 500;
+    }
+    .body-title h2 {
+      margin-bottom: 10%;
+      font-size: 16px;
+    }
   }
 }
+
+
+
 
 

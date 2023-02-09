@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Post } from '../models/post.model';
+import { Post } from '../models/Post.model';
 
 @Component({
   selector: 'app-index',
@@ -8,24 +8,11 @@ import { Post } from '../models/post.model';
 })
 
 export class IndexComponent {
-  posts: Post[] = [];
   opened: boolean = false;
+  dropdownOpen: boolean = false;
+  isUserLoggedIn: boolean = false;
 
-  ngOnInit() {
-    this.posts = [
-      { id: 1,
-        lastname: 'Do',
-        firstname: 'Jane',
-        birthDate: '01/01/01',
-        picture: 'picture',
-        dateOfDisappearance: '01/01/2020',
-        placeOfDisappearance: 'Paris',
-        description: 'description'
-      },
-    ];
-  }
-
-  toggleSidebar() {
-    this.opened = !this.opened
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
   }
 }
