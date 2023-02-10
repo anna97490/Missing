@@ -1,0 +1,20 @@
+.cont-img,
+img {
+  height: 100%;
+}
+.container-page  {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  height: 35%;
+  .card-link {
+    width: 45%;
+    .field-disappearance {
+      margin-bottom: 2px;
+    }
+  }
+  .cont-img,
+  img {
+    height: 100%;
+  }
+}

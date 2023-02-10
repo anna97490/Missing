@@ -1,26 +1,39 @@
 @import '../app.component.scss';
 
-html, body {
-  margin: 0 !important;
-}
-
 .container-dashboard {
   height: 100vh;
-  padding: 7% 3%;
-  & .cont-aside {
+  padding: 10% 3% 0 3%;
+  .cont-aside {
     width: 88% !important;
-    padding-top: 30%;
+    padding-top: 40%;
+    box-shadow: 4px 10px 17px 0px rgb(0 0 0 / 9%);
   }
-  & .cont-infos {
-    margin-left: 17%;
-  }
-  & .link-aside {
+  .link-aside {
     font-size: 15px !important;
   }
-  & .btn-cont {
+  .btn-cont {
     background-color: #f1f1f1;
-    & .btn-save {
+    .btn-save {
       background-color: #87b97a
     }
+  }
+  .button-bck {
+    margin-left: 10%;
+  }
+  .container-infos {
+    margin-left: 19%;
+  }
+  .title-infos {
+    margin-bottom: 1%;
+  }
+  .content-infos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .field-infos {
+    width: 50%;
+  }
+  .field-photo {
+    width: 100%;
   }
 }
