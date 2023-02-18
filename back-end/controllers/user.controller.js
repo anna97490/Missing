@@ -3,20 +3,19 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 
-// Create user/signUp
+// Create user
 exports.signUp = async (req, res, next) => {
     try {
-        const userObject = JSON.parse(req.body.user);
-        delete userObject._id;
+        const hash = await bcrypt.hash(req.body.password, 10);
         const user = new User({
-        ...userObject,
-        userId: req.auth.userId,
-        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
-    });
+            ...req.body,
+            // imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+            password: hash
+        });
         await user.save();
-        res.status(200).json({ message: 'User created !' });
+        res.status(201).json({ message: 'User created!' });
     } catch (error) {
-        res.status(400).json({ error });
+        res.status(400).json({ error });   
     }
 };
 
@@ -32,51 +31,13 @@ exports.login = async (req, res, next) => {
             return res.status(401).json({ message: 'Uncorrect password' });
         }
         res.status(200).json({
-        userId: user._id,
-        token: jwt.sign(
-            { userId: user._id },
-            'RANDOM_TOKEN_SECRET',
-            { expiresIn: '24h'}
-        )
-    });
-    } catch (error) {
-        res.status(500).json({ error });
-    }
-};
-
-// Update user
-exports.updateUser = async (req, res, next) => {
-    try {
-        const userObject = req.file ? {
-            ...JSON.parse(req.body.user),
-            imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
-        } : { ...req.body };
-        
-        delete userObject._userId;
-        const user = await User.findOne({ _id: req.params.id });
-        if (user.userId != req.auth.userId) {
-            res.status(401).json({ message: 'Not authorized' });
-        } else {
-            await User.updateOne({ _id: req.params.id }, { ...userObject, _id: req.params.id });
-            res.status(200).json({ message: 'User updated !' });
-        }
-    } catch (error) {
-        res.status(400).json({ error });
-    }
-};
-
-// Delete user
-exports.deletePost = async (req, res, next) => {
-    try {
-        const user = await User.findOne({ _id: req.params.id });
-        if (user._id != req.auth.id) {
-            res.status(401).json({ message: 'Not authorized' });
-        } else {
-            const filename = post.imageUrl.split('/images/')[1];
-            await fs.promises.unlink(`images/${filename}`);
-            await User.deleteOne({ _id: req.params.id });
-            res.status(200).json({ message: 'User deleted !' });
-        }
+            userId: user._id,
+            token: jwt.sign(
+                { userId: user._id },
+                'RANDOM_TOKEN_SECRET',
+                { expiresIn: '24h'}
+            )
+        });
     } catch (error) {
         res.status(500).json({ error });
     }
@@ -101,6 +62,50 @@ exports.getUser = async (req, res, next) => {
         res.status(404).json({ error });
     }
 };
+
+// Update user
+exports.updateUser = async (req, res, next) => {
+    try {
+        const user = await User.findById(req.params.id);
+        if (!user) {
+          return res.status(404).json({ message: 'User not found!' });
+        // } else if(user.imageUrl !== null) {
+        //   const filename = user.imageUrl.split('/images/')[1];
+        //   fs.unlinkSync(`./images/${filename}`);
+        }
+        const userObject = req.file ? {
+            ...JSON.parse(req.body.user),
+            imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+        } : { ...req.body };
+    
+        const updatedUser = await User.findOneAndUpdate({ _id: req.params.id }, userObject, {
+            new: true
+        });
+        res.status(200).json({ message: 'Profile updated!' });
+    } catch (error) {
+        res.status(500).json({ error: 'Server Error!' });
+    }
+};
+
+// Delete user
+exports.deleteUser = async (req, res, next) => {
+    try {
+        const user = await User.findById(req.params.id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found!' });  
+        } else {
+            // const filename = post.imageUrl.split('/images/')[1];
+            // await fs.promises.unlink(`images/${filename}`);
+            await User.deleteOne({ _id: req.params.id });
+            res.status(200).json({ message: 'User deleted !' });
+        }
+    } catch (error) {
+        res.status(500).json({ error });
+    }
+};
+
+
 
 
 
