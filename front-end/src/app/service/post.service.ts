@@ -14,6 +14,7 @@ export class PostService {
   }
 
   getPosts() {
+    console.log('get')
     return this.http.get<Post[]>(this.apiUrl);
   }
 

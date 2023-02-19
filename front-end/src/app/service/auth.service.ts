@@ -11,34 +11,34 @@ export class AuthService {
   private loggedIn: boolean = false;
   router: any;
 
-  // constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  // login(email: string, password: string): Observable<any> {
-  //   return this.http.post<any>(this.apiUrl, { email, password })
-  //   .pipe(
-  //     map(response => {
-  //       localStorage.setItem('token', response.token);
-  //       this.loggedIn = true;
-  //       return response;
-  //     })
-  //   );
-  // }
+  login(email: string, password: string): Observable<any> {
+    return this.http.post<any>(this.apiUrl, { email, password })
+    .pipe(
+      map(response => {
+        localStorage.setItem('token', response.token);
+        this.loggedIn = true;
+        return response;
+      })
+    );
+  }
 
-  // signup(user: any): Observable<any> {
-  //   return this.http.post<any>(`${this.apiUrl}/signup`, user)
-  //     .pipe(
-  //       map(response => {
-  //         localStorage.setItem('token', response.token);
-  //         this.loggedIn = true;
-  //         return response;
-  //       })
-  //     );
-  // }
+  signup(user: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/signup`, user)
+      .pipe(
+        map(response => {
+          localStorage.setItem('token', response.token);
+          this.loggedIn = true;
+          return response;
+        })
+      );
+  }
 
-  // logout() {
-  //   localStorage.removeItem('token');
-  //   this.loggedIn = false;
-  // }
+  logout() {
+    localStorage.removeItem('token');
+    this.loggedIn = false;
+  }
 
   isLoggedIn(): boolean {
     this.router.navigate(['/home']);
