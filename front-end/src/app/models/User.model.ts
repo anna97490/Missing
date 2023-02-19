@@ -9,6 +9,7 @@ export class User {
   private email: string;
   private password: string;
   private profilePicture: string;
+  id: any;
 
   constructor(
     private router: Router,
@@ -29,23 +30,5 @@ export class User {
       this.email = email;
       this.password = password;
       this.profilePicture = profilePicture;
-  }
-
-  login(email: string, password: string) {
-    if (email === 'user' && password === 'password') {
-      this.isLogged = true;
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  signin() {
-  }
-
-  logout(): void {
-    this.isLogged = false;
-
-    this.router.navigate(['/home']);
   }
 }

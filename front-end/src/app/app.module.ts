@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AuthService } from './service/auth.service';
+import { UserService } from './service/user.service';
+import { PostService } from './service/post.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +40,11 @@ import { MissingFileComponent } from './missing-file/missing-file.component';
     AppRoutingModule,
     SidebarModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    UserService,
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
