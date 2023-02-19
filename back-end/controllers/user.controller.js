@@ -66,7 +66,7 @@ exports.updateUser = async (req, res, next) => {
 };
 
 // Delete user
-exports.deletePost = async (req, res, next) => {
+exports.deleteUser = async (req, res, next) => {
     try {
         const user = await User.findOne({ _id: req.params.id });
         if (user._id != req.auth.id) {
