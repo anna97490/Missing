@@ -10,7 +10,7 @@ import { UserService } from '../../service/user.service';
 export class SidebarComponent implements OnInit {
   user: any;
   isLoggedIn: boolean = false;
-  showSidebar: boolean = false;
+  showSidebar: boolean = true;
 
   constructor(private authService: AuthService, private userService: UserService) {}
 

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AuthService } from './service/auth.service';
 import { UserService } from './service/user.service';
 import { PostService } from './service/post.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import { MissingFileComponent } from './missing-file/missing-file.component';
     MissingFileComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SidebarModule.forRoot()

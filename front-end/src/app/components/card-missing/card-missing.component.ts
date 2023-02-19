@@ -9,12 +9,13 @@ import { PostService } from '../../service/post.service';
 })
 export class CardMissingComponent {
   posts: Post[] = [];
-  postService: any = PostService;
+
+  constructor(private postService: PostService) {}
 
   ngOnInit() {
     this.postService.getPosts().subscribe((posts: Post[]) => {
-      this.posts = posts;
-    });
+    this.posts = posts;
+    })
   }
 
   // this.postService.getPostById(id).subscribe((post: Post) => {
