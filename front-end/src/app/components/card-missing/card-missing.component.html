@@ -1,17 +1,1 @@
-<div class="container-page">
-  <div *ngFor="let post of posts" class="card-link flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <div class="cont-img">
-      <a href="#">
-        <img class="object-cover md:rounded-none md:rounded-l-lg" src="{{ post.picture }}" alt="The logo of Missing website">
-      </a>
-    </div>
 
-    <div class="flex flex-col justify-between p-4 leading-normal">
-      <span class="field-disappearance">{{ post.firstname }} {{ post.lastname }}</span>
-      <span class="field-disappearance">Né(e) le: {{ post.birthDate }}</span>
-      <span class="field-disappearance">Date de la disparition: {{ post.dateOfDisappearance }}</span>
-      <span class="field-disappearance">Lieu de la disparition: {{ post.placeOfDisappearance }}</span>
-      <span class="field-disappearance">{{ post.description }}</span>
-    </div>
-  </div>
-</div>

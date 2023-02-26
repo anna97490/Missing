@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthService } from './service/auth.service';
+import { AuthGuard } from './service/auth.guard';
 import { UserService } from './service/user.service';
 import { PostService } from './service/post.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,7 +20,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ListMissingFileComponent } from './list-missing-file/list-missing-file.component';
 import { CardMissingComponent } from './components/card-missing/card-missing.component';
 import { MissingFileComponent } from './missing-file/missing-file.component';
-
+import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -35,17 +37,20 @@ import { MissingFileComponent } from './missing-file/missing-file.component';
     ListMissingFileComponent,
     CardMissingComponent,
     MissingFileComponent,
+    ModalComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    FormsModule
   ],
   providers: [
     AuthService,
     UserService,
-    PostService
+    PostService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

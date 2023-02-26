@@ -1,7 +1,15 @@
 @import '../app.component.scss';
 
-.container {
+.container-login {
   height: 100vh;
-  padding: 10% 16% 0% 16%;
+  padding: 2% 16% 0% 16%;
   background-color: $primary-color-bckgrnd;
+
+  .logo {
+    margin-bottom: 3%;
+  }
+
+  .btn-login {
+    text-align: center;
+  }
 }

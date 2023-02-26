@@ -1,30 +1,33 @@
 export class Post {
-  id: number;
+  id: string;
   lastname: string;
   firstname: string;
-  birthDate: string; // a changer
+  birthDate: Date;
   picture: string;
-  dateOfDisappearance: string; // a changer
-  placeOfDisappearance: string;
+  missingDate: Date;
+  missingPlace: string;
   description: string;
+  createdAt: Date;
 
   constructor(
-    id: number,
+    id: string,
     lastname: string,
     firstname: string,
-    birthDate: string,
+    birthDate: Date,
     picture: string,
-    dateOfDisappearance: string,
-    placeOfDisappearance: string,
-    description: string
-) {
+    missingDate: Date,
+    missingPlace: string,
+    description: string,
+    createdAt: Date
+  ) {
     this.id = id;
     this.lastname = lastname;
     this.firstname = firstname;
     this.birthDate = birthDate;
     this.picture = picture;
-    this.dateOfDisappearance = dateOfDisappearance;
-    this.placeOfDisappearance = placeOfDisappearance;
+    this.missingDate = missingDate;
+    this.missingPlace = missingPlace;
     this.description = description;
+    this.createdAt = createdAt;
   }
 }

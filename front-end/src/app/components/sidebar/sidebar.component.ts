@@ -15,17 +15,15 @@ export class SidebarComponent implements OnInit {
   constructor(private authService: AuthService, private userService: UserService) {}
 
   ngOnInit() {
-    // this.isLoggedIn = this.authService.isLoggedIn();
-    // if (this.isLoggedIn) {
-    //   this.userService.getUsers().subscribe(
-    //     (data) => {
-    //       this.user = data;
-    //       this.showSidebar = true;
-    //     },
-    //     (error) => {
-    //       console.log(error);
-    //     }
-    //   );
-    // }
+    this.isLoggedIn = this.authService.isLoggedIn();
+  }
+
+  preventDefault(event: Event) {
+    event.preventDefault();
+  }
+
+  logout(event: Event) {
+    event.preventDefault();
+    this.authService.logout();
   }
 }

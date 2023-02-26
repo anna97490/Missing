@@ -1,20 +1,24 @@
-.cont-img,
-img {
-  height: 100%;
-}
-.container-page  {
-  display: flex;
-  justify-content: center;
-  margin-top: 2%;
-  height: 35%;
+.container-page {
+  padding-bottom: 6%;
+
+  .cont-img,
+  img {
+    height: 100%;
+  }
+
   .card-link {
-    width: 45%;
+    width: 100%;
+    margin-top: 5%;
     .field-disappearance {
       margin-bottom: 2px;
     }
   }
+
   .cont-img,
   img {
     height: 100%;
   }
 }
+
+
+

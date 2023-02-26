@@ -23,9 +23,9 @@ export class PostService {
     return this.http.get<Post>(url);
   }
 
-  updatePost(post: Post) {
-    const url = `${this.apiUrl}/${post.id}`;
-    return this.http.put(url, post);
+  editPost(id: string) {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put(url, id);
   }
 
   deletePost(id: string) {

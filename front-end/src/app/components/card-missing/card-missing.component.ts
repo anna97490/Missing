@@ -1,24 +1,8 @@
-import { Component } from '@angular/core';
-import { Post } from '../../models/Post.model';
-import { PostService } from '../../service/post.service';
+import { Component, Input  } from '@angular/core';
 
 @Component({
   selector: 'app-card-missing',
   templateUrl: './card-missing.component.html',
   styleUrls: ['./card-missing.component.scss']
 })
-export class CardMissingComponent {
-  posts: Post[] = [];
-
-  constructor(private postService: PostService) {}
-
-  ngOnInit() {
-    this.postService.getPosts().subscribe((posts: Post[]) => {
-    this.posts = posts;
-    })
-  }
-
-  // this.postService.getPostById(id).subscribe((post: Post) => {
-  //   // Utiliser le post récupéré
-  // });
-}
+export class CardMissingComponent {}
