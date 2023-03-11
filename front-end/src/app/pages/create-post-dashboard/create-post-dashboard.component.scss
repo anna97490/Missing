@@ -1,0 +1,22 @@
+.container-form-missing {
+  padding: 10% 2% 0% 20% ;
+  background-color: rgba(219, 219, 219, 0.0784313725);
+  form {
+    padding: 3%;
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+  .change-btn {
+    color: #7ca57c;
+    background-color: #fff;
+    border: 1px solid #7ca57c;
+  }
+  .upload-text {
+    color: #7ca57c;
+  }
+  button {
+    margin-top: 4%;
+    background-color: #7ca57c;
+  }
+}

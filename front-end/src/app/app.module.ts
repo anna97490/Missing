@@ -9,19 +9,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { ButtonComponent } from './components/button/button.component';
-import { IndexComponent } from './index/index.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginComponent } from './login/login.component';
+import { IndexComponent } from './pages/index/index.component';
+import { LoginComponent } from './pages/login/login.component';
 import { SigninComponent } from './signin/signin.component';
 import { SidebarModule } from 'ng-sidebar';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ListMissingFileComponent } from './list-missing-file/list-missing-file.component';
 import { CardMissingComponent } from './components/card-missing/card-missing.component';
-import { MissingFileComponent } from './missing-file/missing-file.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './components/modal/modal.component';
+import { EditCardComponent } from './pages/edit-card/edit-card.component';
+import { PostsListDashboardComponent } from './pages/posts-list-dashboard/posts-list-dashboard.component';
+import { CreatePostDashboardComponent } from './pages/create-post-dashboard/create-post-dashboard.component';
+import { UserInfosComponent } from './pages/user-infos/user-infos.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,27 +33,30 @@ import { ModalComponent } from './components/modal/modal.component';
     HomeComponent,
     ButtonComponent,
     IndexComponent,
-    DashboardComponent,
     LoginComponent,
     SigninComponent,
     SidebarComponent,
-    ListMissingFileComponent,
     CardMissingComponent,
-    MissingFileComponent,
     ModalComponent,
+    EditCardComponent,
+    PostsListDashboardComponent,
+    CreatePostDashboardComponent,
+    UserInfosComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SidebarModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthService,
     UserService,
     PostService,
-    AuthGuard
+    AuthGuard,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

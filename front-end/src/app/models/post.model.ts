@@ -1,5 +1,5 @@
 export class Post {
-  id: string;
+  _id: string;
   lastname: string;
   firstname: string;
   birthDate: Date;
@@ -8,9 +8,10 @@ export class Post {
   missingPlace: string;
   description: string;
   createdAt: Date;
+  userId: string;
 
   constructor(
-    id: string,
+    _id: string,
     lastname: string,
     firstname: string,
     birthDate: Date,
@@ -18,9 +19,10 @@ export class Post {
     missingDate: Date,
     missingPlace: string,
     description: string,
-    createdAt: Date
+    createdAt: Date,
+    userId: string
   ) {
-    this.id = id;
+    this._id = _id;
     this.lastname = lastname;
     this.firstname = firstname;
     this.birthDate = birthDate;
@@ -29,5 +31,6 @@ export class Post {
     this.missingPlace = missingPlace;
     this.description = description;
     this.createdAt = createdAt;
+    this.userId = userId;
   }
 }

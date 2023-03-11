@@ -11,7 +11,7 @@ router.post('/signup', multer, userController.signUp);
 // Login
 router.post('/login', userController.login)
 
-// Get One user by id
+// Get user by id
 router.get('/:id', auth, userController.getUser);
 
 // Get all users

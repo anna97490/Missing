@@ -21,8 +21,6 @@ exports.createPost = async (req, res, next) => {
     }
 };
 
-
-
 // Get all posts
 exports.getAllPosts = async (req, res, next) => {
     try {

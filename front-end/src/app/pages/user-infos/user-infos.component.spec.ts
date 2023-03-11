@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MissingFileComponent } from './missing-file.component';
+import { UserInfosComponent } from './user-infos.component';
 
-describe('MissingFileComponent', () => {
-  let component: MissingFileComponent;
-  let fixture: ComponentFixture<MissingFileComponent>;
+describe('UserInfosComponent', () => {
+  let component: UserInfosComponent;
+  let fixture: ComponentFixture<UserInfosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MissingFileComponent ]
+      declarations: [ UserInfosComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MissingFileComponent);
+    fixture = TestBed.createComponent(UserInfosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../service/auth.service';
+import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,15 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  email   : string = '';
+  password: string = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   preventDefault(event: Event) {
     event.preventDefault();
   }
-
-  email: string = "";
-  password: string = "";
 
   login(event: Event) {
     event.preventDefault();
