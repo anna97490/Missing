@@ -1,0 +1,81 @@
+.container-index {
+  position: relative;
+  padding: 10% 3% 0 3%;
+  .top-of-index {
+    display: flex;
+    flex-wrap: wrap;
+    .cont-creation {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      float: right;
+      .span-creation {
+        font-size: 13px;
+        margin-left: 8px;
+        padding-top: 2%;
+      }
+      .creation-icon {
+        width: 20px;
+      }
+    }
+    .cont-search-bar {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .form-search-bar {
+        margin-bottom: 2%;
+        width: 40%;
+        .search-bar {
+          width: 100%;
+        }
+        .btn-search {
+          background-color: #aba09c;
+        }
+      }
+    }
+  }
+  hr {
+    margin-bottom: 2%;
+  }
+  .container-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .cont-edit-delete {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 9%;
+      margin-right: 1%;
+      right: 1%;
+      top: 4%;
+      svg {
+        width: 75%;
+      }
+    }
+    .cont-img,
+    img {
+      height: 100%;
+    }
+    .card-link {
+      position: relative;
+      margin-top: 2%;
+      .field-disappearance {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

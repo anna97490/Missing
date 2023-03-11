@@ -1,22 +1,24 @@
-.container-page {
-  padding-bottom: 6%;
-
-  .cont-img,
-  img {
-    height: 100%;
-  }
-
-  .card-link {
-    width: 100%;
-    margin-top: 5%;
-    .field-disappearance {
-      margin-bottom: 2px;
+.card-link {
+  margin: 3% 0;
+  padding-top: 5%;
+  width: 100%;
+  position: relative;
+  .cont-img {
+    width: 33%;
+    img {
+      height: 100%;
     }
   }
-
-  .cont-img,
-  img {
-    height: 100%;
+  .field-disappearance {
+    margin-bottom: 2px;
+  }
+  .cont-edit-delete {
+    position: absolute;
+    top: 6%;
+    right: 2%;
+    svg {
+      width: 75%;
+    }
   }
 }
 

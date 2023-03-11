@@ -36,7 +36,8 @@ exports.login = async (req, res, next) => {
                 { userId: user._id },
                 'RANDOM_TOKEN_SECRET',
                 { expiresIn: '24h'}
-            )
+            ),
+            message: 'Logged'
         });
     } catch (error) {
         res.status(500).json({ error });
@@ -53,10 +54,12 @@ exports.getAllUsers = async (req, res, next) => {
     }
 };
 
-// Get one user by id
+// Get user by id
 exports.getUser = async (req, res, next) => {
+    console.log(req.params.id)
     try {
         const user = await User.findOne({ _id: req.params.id });
+        console.log('user', user)
         res.status(200).json(user);
     } catch (error) {
         res.status(404).json({ error });

@@ -1,0 +1,19 @@
+.container-edit-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  padding: 10% 5% 0 5%;
+  form {
+    margin-top: 4%;
+    .cont-fields {
+      margin-bottom: 2%;
+    }
+  }
+  .link-back,
+  .cont-sidebar,
+  .cont-photo-missing,
+  form {
+    width: 65%;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -11,7 +11,6 @@ export class ModalComponent {
   preventDefault(event: Event) {
     event.preventDefault();
   }
-  // @Output() close = new EventEmitter<void>();
 
   closeModal(event: Event) {
     event.preventDefault();

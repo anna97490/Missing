@@ -1,14 +1,17 @@
-@import '../app.component.scss';
 
 .container-login {
+  position: relative;
   height: 100vh;
   padding: 2% 16% 0% 16%;
-  background-color: $primary-color-bckgrnd;
-
+  background-color: #f8f9f8;
+  .link-index {
+    position: absolute;
+    top: 12%;
+    left: 2%;
+  }
   .logo {
     margin-bottom: 3%;
   }
-
   .btn-login {
     text-align: center;
   }

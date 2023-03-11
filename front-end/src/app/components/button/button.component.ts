@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input() text: string = '';
+  @Input() text    : string = '';
   @Input() fontSize: string = '14px';
+  @Input() type    : 'submit' | 'button' = 'submit';
 }

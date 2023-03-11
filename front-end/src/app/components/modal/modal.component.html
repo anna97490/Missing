@@ -1,6 +1,7 @@
 <div class="modal-background" [ngClass]="{'modal-background': true, 'hide': !isModalOpen}" (click)="closeModal($event)">
   <div [ngClass]="{'modal-container': true, 'hide': !isModalOpen}" class="modal-container" (click)="$event.stopPropagation()">
 
+    <!-- Close the modal -->
     <div class="cont-btn-close">
       <button class="btn-close" (click)="closeModal($event)">
         <svg aria-hidden="true" class="creation-icon flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -10,8 +11,10 @@
     </div>
 
     <div class="modal-content">
+      <!-- Displayed link to Modal in Index  -->
       <span class="modal-txt">Veuillez vous connecter ou vous inscrire</span>
 
+      <!-- Modal content -->
       <div class="btn-content">
         <a class="nav-links" routerLink="/login">
           <app-button [text]="'Se connecter'" [fontSize]="'12px'"></app-button>

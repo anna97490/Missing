@@ -1,21 +1,22 @@
 import { Router } from "@angular/router";
 
 export class User {
-  private isLogged: boolean;
-  private lastname: string;
-  private firstname: string;
-  private birthDate: Date;
-  private address: string;
-  private email: string;
-  private password: string;
-  private profilePicture: string;
-  id: any;
+  isLogged: boolean;
+  _id: string;
+  lastname: string;
+  firstname: string;
+  birthDate: Date;
+  address: string;
+  email: string;
+  password: string;
+  profilePicture: string;
 
   constructor(
-    private router: Router,
+    router: Router,
     isLogged: boolean,
-    nom: string,
-    prenom: string,
+    _id: string,
+    firstname: string,
+    lastname: string,
     birthDate: Date,
     address: string,
     email: string,
@@ -23,8 +24,9 @@ export class User {
     profilePicture: string
      ) {
       this.isLogged = false;
-      this.lastname = nom;
-      this.firstname = prenom;
+      this._id = _id;
+      this.lastname = lastname;
+      this.firstname = firstname;
       this.birthDate = birthDate;
       this.address = address;
       this.email = email;
