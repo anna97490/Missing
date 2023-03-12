@@ -7,7 +7,9 @@
     <h1>Mes fiches disparition</h1>
   </div>
 
-  <!-- Page content -->
-  <app-card-missing></app-card-missing>
+  <!-- Page content - List of Posts -->
+  <div *ngFor="let post of postsOfUser" class="container-page">
+    <app-card-missing [post]="post"></app-card-missing>
+  </div>
 
 </div>
