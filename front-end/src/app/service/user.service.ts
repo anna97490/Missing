@@ -20,6 +20,10 @@ export class UserService implements OnInit{
 
   }
 
+  getUserIdLS() {
+    return localStorage.getItem('userId');
+  }
+
   getUsers() {
     return this.http.get<User[]>(this.apiUrl);
   }
